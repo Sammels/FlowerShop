@@ -11,9 +11,7 @@ SECRET_KEY = env.str('DJANGO_SECRET_KEY')
 DEBUG = True
 
 ALLOWED_HOSTS = env.list("DJANGO_ALLOWED_HOSTS", default=[
-                         "localhost", "127.0.0.1"])
-
-
+    "localhost", "127.0.0.1"])
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -55,16 +53,12 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'flower_shop.wsgi.application'
 
-
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-
-
 
 AUTH_PASSWORD_VALIDATORS = [
     {
@@ -81,8 +75,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
-
 LANGUAGE_CODE = 'ru-ru'
 
 TIME_ZONE = 'Europe/Moscow'
@@ -96,7 +88,7 @@ STATIC_URL = '/static/'
 STATIC_ROOT = str(Path(BASE_DIR, 'staticfiles'))
 
 STATICFILES_DIRS = [
-    str(Path(BASE_DIR, 'static')),]
+    str(Path(BASE_DIR, 'static')), ]
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
